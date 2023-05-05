@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index','PostsController@index');
+//Route::get('/index','PostsController@index');
 
 
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -42,3 +42,5 @@ Route::get('/search','UsersController@index');
 
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');
+
+Route::get('/logout','PostsController@logout');

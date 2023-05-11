@@ -12,15 +12,19 @@ class PostsController extends Controller
     public function index(){
         $posts = DB::table('posts')->get();
         return view('posts.index',['posts'=>$posts]);
+
     }
 
     public function tweet(Request $request){
+        $id = \Auth::user()->id;
         $post = $request->input('newTweet');
+
         DB::table('posts')->insert([
+            'user_id'=>$id,
             'posts'=>$post
         ]);
 
-        return redirect('/index');
+        return redirect('index');
     }
 
     public function logout(Request $request){

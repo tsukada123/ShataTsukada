@@ -34,7 +34,7 @@ Route::get('/added', 'Auth\RegisterController@added');
 
 
 //ログイン中のページ
-Route::get('/top','PostsController@index');
+Route::get('/index','PostsController@index');
 
 Route::get('/profile','UsersController@profile');
 

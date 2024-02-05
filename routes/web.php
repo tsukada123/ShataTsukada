@@ -40,8 +40,9 @@ Route::get('/post/{id}/delete','PostsController@delete');
 Route::get('/profile','UsersController@profile');
 
 Route::get('/search','UsersController@search');
+Route::post('/search_result','UsersController@search_result');
 Route::post('/addFollow','UsersController@addFollow');
-Route::post('/deleteFollow','UsersController@deleteFollow');
+Route::get('/user/{id}/deleteFollow','UsersController@deleteFollow');
 
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');

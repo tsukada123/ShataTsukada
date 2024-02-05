@@ -1,22 +1,41 @@
 @charset "utf-8";
-html{
-}
-body{
-}
+
+html {}
+
+body {}
+
 /* header */
-header{
-    background:#3C4767;
+header {
+    background: #3C4767;
 }
 
 /* main content */
-#row{
+#row {
     display: flex;
     flex-flow: row wrap;
 }
-#container{
+
+#container {
     flex: 0 0 80%;
 }
-#side-bar{
+
+#side-bar {
     flex: 0 0 19%;
     border-left: 1px solid #6C6C6C;
+}
+
+/* モーダルウィンドウ（postの編集画面）の非表示*/
+.modal-main {
+    display: none;
+}
+
+.modal-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666666;
+}
+
+.slide-left {
+    display: flex;
 }
